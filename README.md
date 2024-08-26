@@ -5,17 +5,17 @@ Refer to the instructions below for each exercise. All DAGs can run locally and 
 
 Consider using [Ask Astronomer](ask.astronomer.io) if you need additional guidance with any of the exercises.
 
-## DAG authoring exercises
-These exercises are designed to get you familiar with commonly used Airflow features and methods for authoring DAGs. Making use of these features will ensure your DAGs are scalable, reliable, and follow best practices. Feel free to use the following resources:
-
-- [Datasets and Data-Aware Scheduling in Airflow guide](https://www.astronomer.io/guides/airflow-datasets/)
-- [Dynamic task mapping guide](https://www.astronomer.io/docs/learn/dynamic-tasks)
-
 ### Setup
 1. Install the [Astro CLI](https://www.astronomer.io/docs/astro/cli/install-cli)
 2. If you can’t install the CLI, you can run the project from your forked repo using GitHub codespaces.
 3. Copy the contents of `.env_example` into a new file called `.env` in the root directory of your project.
 4. Start Airflow locally by running `astro dev start`
+
+## DAG authoring exercises
+These exercises are designed to get you familiar with commonly used Airflow features and methods for authoring DAGs. Making use of these features will ensure your DAGs are scalable, reliable, and follow best practices. Feel free to use the following resources:
+
+- [Datasets and Data-Aware Scheduling in Airflow guide](https://www.astronomer.io/guides/airflow-datasets/)
+- [Dynamic task mapping guide](https://www.astronomer.io/docs/learn/dynamic-tasks)
 
 For exercises in this section, there are three DAGs you will start with from the `dag/exercises/` folder. `Upstream_dag_1` retrieves weather data for a list of cities. `Upstream_dag_2` retrieves sunrise and sunset data for a list of cities. And `downstream_dag` creates a report based on data generated from the two upstream DAGs. 
 
