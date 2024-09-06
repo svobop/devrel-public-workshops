@@ -5,7 +5,7 @@ from airflow.decorators import dag, task
 from include.helper_functions import expensive_api_call
 
 
-@dag(start_date=datetime(2023, 1, 1), max_active_runs=3, schedule=None, catchup=False)
+@dag(start_date=datetime(2023, 1, 1), max_active_runs=3, schedule=None, catchup=False, tags=["exercise"],)
 def bad_practices_dag_1():
 
     the_meaning_of_life_the_universe_and_everything = expensive_api_call()

@@ -11,6 +11,7 @@ from include.helper_functions import expensive_api_call
     max_active_runs=3,
     schedule=None,
     catchup=False,
+    tags=["solution"],
 )
 def avoiding_top_level_code():
 
