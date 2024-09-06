@@ -38,9 +38,10 @@ Best practice is to give your pipelines sensible defaults for your team, to hand
 
 **Task**:  In the downstream DAG, define the default arguments and max consecutive DAG runs. Give it an owner and set the number of retries.
 
-### Exercise 4: XYZ
+### Exercise 4: Avoid top-level DAG code
+Top-level DAG code is an [Airflow anti-pattern](https://www.astronomer.io/docs/learn/dag-best-practices#avoid-top-level-code-in-your-dag-file). Because the DAG processor executes the `.py` files that contain DAGs, all code that's not contained within the context of a task will be executed, which could easily result in DAGs failing to parse.
 
-
+**Task**: Rewrite the DAG such that the DAG is able to parse. This will result in the DAG showing up in the Airflow UI, and you can proceed to calculate the meaning of life, the universe, and everything.
 
 
 ## Day 2 DAG Operations exercises

@@ -1,3 +1,5 @@
+from time import sleep
+
 import pandas as pd
 
 
@@ -36,3 +38,11 @@ def map_cities_to_weather(
                     df.at[time, city_name] = forecast["hourly"][type_of_forecast][i]
 
     return df
+
+
+def expensive_api_call():
+    """
+    Returns the answer to the question "What is the meaning of life, the universe, and everything?"
+    """
+    sleep(100)  # sleeping for 100 seconds simulates an expensive API call
+    return 42
