@@ -7,8 +7,12 @@ Consider using [Ask Astronomer](ask.astronomer.io) if you need additional guidan
 
 ### Setup
 1. Install the [Astro CLI](https://www.astronomer.io/docs/astro/cli/install-cli)
+    - Start Airflow by running `astro dev start`
 2. If you can’t install the CLI, you can run the project from your forked repo using GitHub codespaces.
-3. Start Airflow by running `astro dev start`
+    - Make sure to start a codespaces with **4 cores**.
+    - Run this command in the Codespaces terminal: `bash ./devcontainer/post_creation_script.sh.`
+    - The Astro CLI will automatically start up all necessary Airflow components as well as the streamlit app. This can take a few minutes.
+    - Once the Airflow project has started, access the Airflow UI by clicking on the Ports tab and opening the forward URL for port 8080.
 
 ## DAG authoring exercises
 These exercises are designed to get you familiar with commonly used Airflow features and methods for authoring DAGs. Making use of these features will ensure your DAGs are scalable, reliable, and follow best practices. Feel free to use the following resources:
