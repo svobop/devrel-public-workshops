@@ -5,8 +5,15 @@ from airflow.decorators import dag, task
 from include.helper_functions import expensive_api_call
 
 
-@dag(start_date=datetime(2023, 1, 1), max_active_runs=3, schedule=None, catchup=False, tags=["exercise"],)
-def bad_practices_dag_1():
+@dag(
+    dag_display_name="4. Exercise: top_level_code",
+    start_date=datetime(2023, 1, 1),
+    max_active_runs=3,
+    schedule=None,
+    catchup=False,
+    tags=["exercise"],
+)
+def top_level_code():
 
     the_meaning_of_life_the_universe_and_everything = expensive_api_call()
 
@@ -19,4 +26,4 @@ def bad_practices_dag_1():
     )
 
 
-bad_practices_dag_1()
+top_level_code()

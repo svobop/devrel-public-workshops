@@ -24,6 +24,7 @@ t_log = logging.getLogger("airflow.task")
 
 
 @dag(
+    dag_display_name="1./3. Exercise Downstream DAG 🌦️",
     ### EXERCISE ###
     # Give this DAG a display name
     ### START CODE HERE ###

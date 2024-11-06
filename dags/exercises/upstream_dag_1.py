@@ -23,7 +23,7 @@ t_log = logging.getLogger("airflow.task")
 
 
 @dag(
-    dag_display_name="Exercise Upstream DAG 1 🌤️",
+    dag_display_name="1./2. Exercise Upstream DAG 1 🌤️",
     start_date=datetime(2024, 6, 1),
     schedule=None,
     max_consecutive_failed_dag_runs=10,
