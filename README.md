@@ -158,19 +158,19 @@ Feel free to use the following resources:
 - [Astro alerts](https://docs.astronomer.io/astro/alerts)
 - [Test your Astro project](https://www.astronomer.io/docs/astro/cli/test-your-astro-project-locally)
 
-## Exercise 5: Start a trial and create a Deployment
+### Exercise 5: Start a trial and create a Deployment
 
 1. Start an Astro trial using [this link](http://q-r.to/dag-workshop-astro-trial ). You can choose a template project to deploy if you wish, or you can skip this step.
 2. Create a new, empty Airflow Deployment in your Astro workspace with default settings.
 
-## Exercise 6: Deploy code to Astro
+### Exercise 6: Deploy code to Astro
 
 Now that you have a Deployment, you can deploy the code we just worked on. You have two options for this workshop:
 
 1. Deploy using the Astro CLI by running `astro login` to sign in to your trial, and then `astro deploy`.
 2. Use the [GitHub Integration](https://www.astronomer.io/docs/astro/deploy-github-integration/) to connect your Astro workspace to your GitHub account and deploy by pushing the code to your fork of the repo. This way you can deploy code even if you don't have the Astro CLI installed.
 
-## Exercise 7: Create an Astro alert
+### Exercise 7: Create an Astro alert
 
 Astro alerts provide an additional layer of observability over Airflow's built-in alerting system. In the exercises/ folder, one of the DAGs helps highlight this functionality. [`upstream_dag_1`](dags/exercises/upstream_dag_1.py) is parameterized to run with user input. You can simulate a failure of the API that data is retrieved from or a time delay in a task completing.
 
@@ -183,7 +183,7 @@ Set up two alerts in your Astro deployment:
 
 For both alerts, choose email as the communication channel. Try out the alerts by running the [`upstream_dag_1`](dags/exercises/upstream_dag_1.py) with the `Simulate API failure` param set to `True` and the `simulate_task_delay` param set to `120` seconds.
 
-## Exercise 8: Write a DAG validation test
+### Exercise 8: Write a DAG validation test
 
 The Astro CLI includes commands that you can use to test and debug DAGs both inside and outside of a locally running Airflow environment. Tests can then be set up to automatically run as part of a CI/CD workflow. Implementing DAG validation tests help you ensure that any new DAG code adheres to your organization’s standards and won’t cause issues in production.
 
