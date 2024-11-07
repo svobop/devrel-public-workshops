@@ -192,7 +192,7 @@ Set up two alerts in your Astro deployment:
 1. A DAG failure alert for the [`upstream_dag_1`](dags/exercises/upstream_dag_1.py) DAG.
 2. A task duration alert for the `create_weather_table` task in [`upstream_dag_1`](/dags/exercises/upstream_dag_1.py) (try 1 minute). 
 
-For both alerts, choose email as the communication channel. Try out the alerts by running the [`upstream_dag_1`](dags/exercises/upstream_dag_1.py) with the `Simulate API failure` param set to `True` and the `simulate_task_delay` param set to `120` seconds.
+For both alerts, choose email as the communication channel. Try out the alerts by running the [`upstream_dag_1`](dags/exercises/upstream_dag_1.py) with the `Simulate API failure` param set to `True` for the first alert and once again with the `simulate_task_delay` param set to `120` seconds.
 
 ## Exercise 8: Write a DAG validation test
 
