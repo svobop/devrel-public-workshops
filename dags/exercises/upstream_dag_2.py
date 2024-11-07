@@ -24,7 +24,7 @@ _WILDCARD_TASK_ID = "get_wildcard_data"
 
 
 @dag(
-    dag_display_name="Exercise upstream DAG 2 🌦️",
+    dag_display_name="1. Exercise upstream DAG 2 🌦️",
     start_date=datetime(2024, 6, 1),
     schedule=None,
     ### EXERCISE ###
@@ -73,7 +73,7 @@ _WILDCARD_TASK_ID = "get_wildcard_data"
             title="Get data from the 'wildcard_conn' connection",
         ),
     },
-    tags=["exercise"],
+    tags=["exercise", "exercise_1", "exercise_2"],
 )
 def upstream_dag_2_ex():
 

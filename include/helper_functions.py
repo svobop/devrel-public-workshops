@@ -40,9 +40,19 @@ def map_cities_to_weather(
     return df
 
 
+def get_random_number_from_api(min: int, max: int, count: int) -> int:
+    import requests
+
+    r = requests.get(
+        f"http://www.randomnumberapi.com/api/v1.0/random?min={min}&max={max}&count={count}"
+    )
+
+    return r.json()[0]
+
+
 def expensive_api_call():
     """
     Returns the answer to the question "What is the meaning of life, the universe, and everything?"
     """
-    sleep(100)  # sleeping for 100 seconds simulates an expensive API call
+    sleep(1)  # imagine this is a very expensive operation, you can test it by changing the sleep time, at some point your DAGs will stop parsing correctly!
     return 42

@@ -23,7 +23,7 @@ t_log = logging.getLogger("airflow.task")
 
 
 @dag(
-    dag_display_name="Exercise Upstream DAG 1 🌤️",
+    dag_display_name="1./2. Exercise Upstream DAG 1 🌤️",
     start_date=datetime(2024, 6, 1),
     schedule=None,
     max_consecutive_failed_dag_runs=10,
@@ -74,7 +74,7 @@ t_log = logging.getLogger("airflow.task")
             description="Set the number of seconds to delay the last task of this DAG.",
         ),
     },
-    tags=["exercise"],
+    tags=["exercise", "exercise_1", "exercise_2"],
 )
 def upstream_dag_1_ex():
 
