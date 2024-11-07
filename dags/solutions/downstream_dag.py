@@ -38,13 +38,13 @@ t_log = logging.getLogger("airflow.task")
     default_args={"owner": "Astro", "retries": 3},
     tags=["solution"],
 )
-def downstream_dag():
+def downstream_dag_solution():
 
     @task
     def fetch_cities_weather_table(**context) -> pd.DataFrame:
 
         df = context["ti"].xcom_pull(
-            dag_id="upstream_dag_1",
+            dag_id="upstream_dag_1_solution",
             task_ids="create_weather_table",
             include_prior_dates=True,
         )
@@ -55,7 +55,7 @@ def downstream_dag():
     def fetch_max_temp_data(**context) -> dict:
 
         data = context["ti"].xcom_pull(
-            dag_id="upstream_dag_2",
+            dag_id="upstream_dag_2_solution",
             task_ids="get_max_temp",
             include_prior_dates=True,
         )
@@ -66,7 +66,7 @@ def downstream_dag():
     def fetch_wind_speed_data(**context) -> dict:
 
         data = context["ti"].xcom_pull(
-            dag_id="upstream_dag_2",
+            dag_id="upstream_dag_2_solution",
             task_ids="get_wind_speed",
             include_prior_dates=True,
         )
@@ -77,7 +77,7 @@ def downstream_dag():
     def fetch_wind_direction_data(**context) -> dict:
 
         data = context["ti"].xcom_pull(
-            dag_id="upstream_dag_2",
+            dag_id="upstream_dag_2_solution",
             task_ids="get_wind_direction",
             include_prior_dates=True,
         )
@@ -88,7 +88,7 @@ def downstream_dag():
     def fetch_wildcard_data(**context) -> dict:
 
         data = context["ti"].xcom_pull(
-            dag_id="upstream_dag_2",
+            dag_id="upstream_dag_2_solution",
             task_ids="get_wildcard_data",
             include_prior_dates=True,
         )
@@ -156,4 +156,4 @@ def downstream_dag():
     )
 
 
-downstream_dag()
+downstream_dag_solution()

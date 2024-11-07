@@ -46,7 +46,7 @@ t_log = logging.getLogger("airflow.task")
     ### STOP CODE HERE ###
     tags=["exercise", "exercise_1", "exercise_3"],
 )
-def downstream_dag_ex():
+def downstream_dag():
 
     @task
     def fetch_cities_weather_table(**context) -> pd.DataFrame:
@@ -67,6 +67,7 @@ def downstream_dag_ex():
             task_ids="get_max_temp",
             include_prior_dates=True,
         )
+        print(data)
 
         return json.loads(data)
 
@@ -168,4 +169,4 @@ def downstream_dag_ex():
     )
 
 
-downstream_dag_ex()
+downstream_dag()

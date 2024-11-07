@@ -57,25 +57,25 @@ _WILDCARD_TASK_ID = "get_wildcard_data"
             title="Get max temperature for my birthday",
         ),
         "get_max_wind_speed": Param(
-            False,
+            True,
             type="boolean",
             title="Get max wind speed for my birthday",
         ),
         "get_wind_direction": Param(
-            False,
+            True,
             type="boolean",
             title="Get the dominant wind direction for my birthday",
             description="Wind direction is returned in degrees from 0 to 360. 0 is wind coming from the North, 90 from the East, 180 from the South, and 270 from the West.",
         ),
         "get_wildcard_data": Param(
-            False,
+            True,
             type="boolean",
             title="Get data from the 'wildcard_conn' connection",
         ),
     },
     tags=["exercise", "exercise_1", "exercise_2"],
 )
-def upstream_dag_2_ex():
+def upstream_dag_2():
 
     @task
     def get_lat_long_for_one_city(**context) -> dict:
@@ -191,4 +191,4 @@ def upstream_dag_2_ex():
     )
 
 
-upstream_dag_2_ex()
+upstream_dag_2()

@@ -71,7 +71,7 @@ t_log = logging.getLogger("airflow.task")
     },
     tags=["solution"],
 )
-def upstream_dag_1():
+def upstream_dag_1_solution():
 
     @task
     def get_cities(**context) -> list:
@@ -226,4 +226,4 @@ def upstream_dag_1():
     )
 
 
-upstream_dag_1()
+upstream_dag_1_solution()
