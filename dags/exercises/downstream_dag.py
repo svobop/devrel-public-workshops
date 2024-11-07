@@ -25,10 +25,6 @@ t_log = logging.getLogger("airflow.task")
 
 @dag(
     dag_display_name="1./3. Exercise Downstream DAG 🌦️",
-    ### EXERCISE ###
-    # Give this DAG a display name
-    ### START CODE HERE ###
-    ### STOP CODE HERE ###
     start_date=datetime(2024, 6, 1),
     ### EXERCISE ###
     # Schedule the DAG to run every day at midnight UTC
@@ -44,7 +40,11 @@ t_log = logging.getLogger("airflow.task")
     # Set the owner of the DAG to your name and the number of retries to 3.
     ### START CODE HERE ###
     ### STOP CODE HERE ###
-    tags=["exercise"],
+    ### EXERCISE ###
+    # Make sure this DAG never has more than 6 consecutive failed runs.
+    ### START CODE HERE ###
+    ### STOP CODE HERE ###
+    tags=["exercise", "exercise_1", "exercise_3"],
 )
 def downstream_dag_ex():
 

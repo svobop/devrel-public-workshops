@@ -73,7 +73,7 @@ _WILDCARD_TASK_ID = "get_wildcard_data"
             title="Get data from the 'wildcard_conn' connection",
         ),
     },
-    tags=["exercise"],
+    tags=["exercise", "exercise_1", "exercise_2"],
 )
 def upstream_dag_2_ex():
 

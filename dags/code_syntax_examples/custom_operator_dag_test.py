@@ -11,8 +11,8 @@ from airflow.models.baseoperator import chain
 from airflow.models.param import Param
 from pendulum import datetime
 
-from include.helper_functions import get_random_number_from_api
 from include.custom_operator import MyBasicMathOperator
+from include.helper_functions import get_random_number_from_api
 
 
 @dag(
@@ -27,7 +27,7 @@ from include.custom_operator import MyBasicMathOperator
     default_args={"retries": 2},
     tags=["syntax_example"],
 )
-def math_dag():
+def custom_operator_dag_test():
 
     @task
     def pick_a_random_number(**context) -> int:
@@ -58,7 +58,7 @@ def math_dag():
     )
 
 
-dag_obj = math_dag()
+dag_obj = custom_operator_dag_test()
 
 
 if __name__ == "__main__":

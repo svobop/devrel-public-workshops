@@ -11,7 +11,7 @@ from include.helper_functions import expensive_api_call
     max_active_runs=3,
     schedule=None,
     catchup=False,
-    tags=["exercise"],
+    tags=["exercise", "exercise_4"],
 )
 def top_level_code():
 
