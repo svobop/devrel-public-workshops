@@ -148,6 +148,8 @@ Top-level DAG code is an [Airflow anti-pattern](https://www.astronomer.io/docs/l
 
 Rewrite the [`top_level_code`](/dags/exercises/top_level_code.py) DAG to move the top-level DAG code into a task. Then you can proceed to calculate the meaning of life, the universe, and everything.
 
+For the solution see [`dags/solutions/top_level_code_solution.py`](dags/solutions/top_level_code_solution.py).
+
 # Day 2 DAG Operations exercises
 
 Now that DAGs are written, we'll cover deploying DAGs and some of the Day 2 operations that Astro enables.
