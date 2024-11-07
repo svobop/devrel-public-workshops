@@ -78,7 +78,7 @@ t_log = logging.getLogger("airflow.task")
 )
 def upstream_dag_1():
 
-    ### EXERCISE ###
+    ### EXERCISE 2 ###
     # Currently only the first city in the list is used to retrieve weather data.
     # 1. Modify the get_cities task to return all cities in the list.
     # 2. Dynamically map the get_lat_long_for_one_city task over all cities in the list.
@@ -184,7 +184,7 @@ def upstream_dag_1():
         else:
             raise ValueError("No weather data found.")
 
-    ### EXERCISE ###
+    ### EXERCISE 1 ###
     # Turn the create_weather_table task into a producer for the Dataset("current_weather_data")
     # Tip: Use the outlets parameter to achieve this as shown in the upstream_dag_2.
 

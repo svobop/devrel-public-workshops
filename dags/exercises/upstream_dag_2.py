@@ -27,10 +27,6 @@ _WILDCARD_TASK_ID = "get_wildcard_data"
     dag_display_name="1. Exercise upstream DAG 2 🌦️",
     start_date=datetime(2024, 6, 1),
     schedule=None,
-    ### EXERCISE ###
-    # Set the maximum number of consecutive failed DAG runs to 10
-    ### START CODE HERE ###
-    ### STOP CODE HERE ###
     catchup=False,
     doc_md=__doc__,
     default_args={
@@ -152,7 +148,7 @@ def upstream_dag_2():
             "daily": "wind_speed_10m_max",
             "timezone": "auto",
         },
-        ## EXERCISE: Turn this task into a producer for the Dataset("wind_speed_data")
+        ## EXERCISE 1: Turn this task into a producer for the Dataset("wind_speed_data")
         ## START CODE HERE ##
         ## END CODE HERE ##
     )
@@ -171,7 +167,7 @@ def upstream_dag_2():
             "daily": "wind_direction_10m_dominant",
             "timezone": "auto",
         },
-        ## EXERCISE: Turn this task into a producer for the Dataset("wind_direction_data")
+        ## EXERCISE 1: Turn this task into a producer for the Dataset("wind_direction_data")
         ## START CODE HERE ##
         ## END CODE HERE ##
     )

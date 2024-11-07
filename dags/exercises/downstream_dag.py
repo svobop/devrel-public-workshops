@@ -26,7 +26,7 @@ t_log = logging.getLogger("airflow.task")
 @dag(
     dag_display_name="1./3. Exercise Downstream DAG 🌦️",
     start_date=datetime(2024, 6, 1),
-    ### EXERCISE ###
+    ### EXERCISE 1 ###
     # Schedule the DAG to run every day at midnight UTC
     # AND whenever both "current_weather_data" and "max_temp_data" are updated
     # AS WELL AS ONE OF the datasets "wind_speed_data" OR "wind_direction_data".
@@ -36,11 +36,11 @@ t_log = logging.getLogger("airflow.task")
     catchup=False,
     doc_md=__doc__,
     description="Generate a report with the weather forecast for the cities and historical weather data.",
-    ### EXERCISE ###
+    ### EXERCISE 3 ###
     # Set the owner of the DAG to your name and the number of retries to 3.
     ### START CODE HERE ###
     ### STOP CODE HERE ###
-    ### EXERCISE ###
+    ### EXERCISE 3 ###
     # Make sure this DAG never has more than 6 consecutive failed runs.
     ### START CODE HERE ###
     ### STOP CODE HERE ###
@@ -153,11 +153,7 @@ def downstream_dag():
             )
         t_log.info("--------------------------")
         if wildcard:
-            ### EXERCISE ###
-            # Format the log message with the wildcard data
-            ### START CODE HERE ###
             t_log.info(f"Wildcard data: {wildcard}")
-            ### STOP CODE HERE ###
 
     generate_report(
         fetch_cities_weather_table(),
