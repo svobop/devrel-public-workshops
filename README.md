@@ -173,7 +173,7 @@ Now that you have a Deployment, you can deploy the code we just worked on. You h
 1. Deploy using the Astro CLI by running `astro login` to sign in to your trial, and then `astro deploy`.
 2. Use the [GitHub Integration](https://www.astronomer.io/docs/astro/deploy-github-integration/) to connect your Astro workspace to your GitHub account and deploy by pushing the code to your fork of the repo. This way you can deploy code even if you don't have the Astro CLI installed.
 
-Set up 3 environment variables with out connections:
+Set up 3 environment variables for our API connections:
 
 ```text
 AIRFLOW_CONN_HISTORICAL_WEATHER_API_CONN=http://https://archive-api.open-meteo.com%2Fv1%2F
