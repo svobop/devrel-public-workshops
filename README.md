@@ -15,6 +15,8 @@ Sample solutions for DAG-writing related exercises can be found in the [`dags/so
 > [!TIP]
 > Consider using [Ask Astro](ask.astronomer.io) if you need additional guidance with any of the exercises.
 
+The [`dags/code_syntax_examples`](dags/code_syntax_examples/) folder contains code examples for Airflow features discussed in the workshop. The [`tests`](tests/) folder contains example DAG validation tests as well as an example for unit testing a custom operator and integration testing a DAG.
+
 ### Setup
 
 To set up a local Airflow environment you have two options, you can either use the Astro CLI or GitHub Codespaces.
