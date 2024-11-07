@@ -6,7 +6,7 @@ This is the repository for the Astronomer DAG Writing Best Practices workshop. T
 
 You can find a recording of the workshop, including a walk-through of the exercises [here](https://www.astronomer.io/events/webinars/dag-writing-best-practices-video/).
 
-# How to use this repo
+## How to use this repo
 
 Set up your environment by following the instructions in the [Setup](#setup) section below. All DAGs in this repository can be run locally and on Astro without connecting to external systems. [Exercises 1-4](#dag-writing-exercises) are focussed on DAG writing and can be completed in a local environment. [Exercises 5-8](#day-2-dag-operations-exercises) are focussed on deploying and testing DAGs and exercises 5-7 require an Astro deployment. If you do not have an Astro account yet, you can sign up for a free trial [here](http://q-r.to/dag-workshop-astro-trial).
 
@@ -15,11 +15,11 @@ Sample solutions for DAG-writing related exercises can be found in the [`dags/so
 > [!TIP]
 > Consider using [Ask Astro](ask.astronomer.io) if you need additional guidance with any of the exercises.
 
-## Setup
+### Setup
 
 To set up a local Airflow environment you have two options, you can either use the Astro CLI or GitHub Codespaces.
 
-### Option 1: Astro CLI
+#### Option 1: Astro CLI
 
 1. Make sure you have [Docker](https://docs.docker.com/get-docker/) installed and running on your machine.
 2. Install the free and open-source [Astro CLI](https://www.astronomer.io/docs/astro/cli/install-cli).
@@ -30,7 +30,7 @@ To set up a local Airflow environment you have two options, you can either use t
 4. Run `astro dev start` in the root of the clone repository to start the Airflow environment.
 5. Access the Airflow UI at `localhost:8080` in your browser. Log in using `admin` as both the username and password.
 
-### Option 2: GitHub Codespaces
+#### Option 2: GitHub Codespaces
 
 If you can't install the CLI, you can run the project from your forked repo using GitHub Codespaces.
 
