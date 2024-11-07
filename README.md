@@ -173,6 +173,14 @@ Now that you have a Deployment, you can deploy the code we just worked on. You h
 1. Deploy using the Astro CLI by running `astro login` to sign in to your trial, and then `astro deploy`.
 2. Use the [GitHub Integration](https://www.astronomer.io/docs/astro/deploy-github-integration/) to connect your Astro workspace to your GitHub account and deploy by pushing the code to your fork of the repo. This way you can deploy code even if you don't have the Astro CLI installed.
 
+Set up 3 environment variables with out connections:
+
+```text
+AIRFLOW_CONN_HISTORICAL_WEATHER_API_CONN=http://https://archive-api.open-meteo.com%2Fv1%2F
+AIRFLOW_CONN_WEATHER_API_CONN=http://https://api.open-meteo.com%2Fv1%2F
+AIRFLOW_CONN_WILDCARD_CONN=http://https://air-quality-api.open-meteo.com%2Fv1%2Fair-quality%3Flatitude%3D46.9481%26longitude%3D7.4474%26hourly%3Dozone%26forecast_days%3D1/?__extra__=%7B%7D
+```
+
 ## Exercise 7: Create an Astro alert
 
 Astro alerts provide an additional layer of observability over Airflow's built-in alerting system. In the exercises/ folder, one of the DAGs helps highlight this functionality. [`upstream_dag_1`](dags/exercises/upstream_dag_1.py) is parameterized to run with user input. You can simulate a failure of the API that data is retrieved from or a time delay in a task completing.
