@@ -11,7 +11,7 @@ from pendulum import datetime
     schedule=None,
     catchup=False,
     tags=["syntax_example"],
-    default_args={"retries": 2},
+    default_args={"retries": 3},
 )
 def run_if_skip_if_example():
     @task.run_if(lambda context: context["task_instance"].task_id.endswith("_do_run"))

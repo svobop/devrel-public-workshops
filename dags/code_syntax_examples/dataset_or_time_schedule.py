@@ -20,7 +20,7 @@ from airflow.timetables.trigger import CronTriggerTimetable
     catchup=False,
     doc_md=__doc__,
     tags=["syntax_example"],
-    default_args={"retries": 2},
+    default_args={"retries": 3},
 )
 def dataset_or_time_schedule():
     @task

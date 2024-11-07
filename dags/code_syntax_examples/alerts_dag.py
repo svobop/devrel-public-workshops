@@ -48,7 +48,7 @@ def failure_function():
         "on_retry_callback": [my_callback_function, MyNotifier()],
         "on_success_callback": [my_callback_function, MyNotifier()],
         "on_failure_callback": [my_callback_function, MyNotifier()],
-        "retries": 2,
+        "retries": 3,
         "retry_delay": duration(seconds=5)
     },
     tags=["syntax_example"],

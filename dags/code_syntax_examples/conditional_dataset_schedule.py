@@ -18,7 +18,7 @@ from pendulum import datetime
     catchup=False,
     doc_md=__doc__,
     tags=["syntax_example"],
-    default_args={"retries": 2},
+    default_args={"retries": 3},
 )
 def conditional_dataset_schedule():
     @task

@@ -23,7 +23,7 @@ from airflow.models.baseoperator import chain
     schedule=None,
     catchup=False,
     tags=["syntax_example"],
-    default_args={"retries": 2},
+    default_args={"retries": 3},
 )
 def task_flow_api_dag():
 

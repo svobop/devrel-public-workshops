@@ -24,7 +24,7 @@ from include.helper_functions import get_random_number_from_api
         "upper_limit": Param(100, type="integer"),
         "lower_limit": Param(1, type="integer"),
     },
-    default_args={"retries": 2},
+    default_args={"retries": 3},
     tags=["syntax_example"],
 )
 def custom_operator_dag_test():

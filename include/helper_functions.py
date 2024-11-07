@@ -54,5 +54,5 @@ def expensive_api_call():
     """
     Returns the answer to the question "What is the meaning of life, the universe, and everything?"
     """
-    # sleep(10)  # sleeping for 10 seconds simulates an expensive API call
+    sleep(1)  # imagine this is a very expensive operation, you can test it by changing the sleep time, at some point your DAGs will stop parsing correctly!
     return 42

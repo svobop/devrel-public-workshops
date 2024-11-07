@@ -12,6 +12,7 @@ from include.helper_functions import expensive_api_call
     schedule=None,
     catchup=False,
     tags=["solution"],
+    default_args={"owner": "Astro", "retries": 3},
 )
 def top_level_code_solution():
 

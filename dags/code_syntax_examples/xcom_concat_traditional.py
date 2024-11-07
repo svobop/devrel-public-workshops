@@ -13,7 +13,7 @@ import time
     schedule=None,
     catchup=False,
     tags=["syntax_example"],
-    default_args={"retries": 2},
+    default_args={"retries": 3},
 )
 def xcom_concat_traditional():
 
