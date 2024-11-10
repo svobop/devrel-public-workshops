@@ -1,17 +1,14 @@
 {
-    "image": "mcr.microsoft.com/devcontainers/universal:2",
-    "features": {
-        "ghcr.io/astronomer/devcontainer-features/astro-cli:1": {
-        "version":"v1.30.0"
-      }
-    },
-    "forwardPorts": [8080, 5432],
-    "portsAttributes": {
-      "8080": {
-        "label": "webserver"
-      },
-      "5432": {
-        "label": "postgres"
-      }
+  "image": "localhost/devrel-public-workshops_20ae48/airflow",
+  "containerUser": "root",
+  "postStartCommand": "apt update && apt install git -y",
+  "customizations": {
+    "vscode": {
+      "settings": {},
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance"
+      ]
     }
   }
+}

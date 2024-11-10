@@ -1,3 +1,5 @@
+container:
+    binary: podman
 postgres:
     port: "5435"
 project:
