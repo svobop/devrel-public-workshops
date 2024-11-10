@@ -150,6 +150,7 @@ def upstream_dag_2():
         },
         ## EXERCISE 1: Turn this task into a producer for the Dataset("wind_speed_data")
         ## START CODE HERE ##
+        outlets=[Dataset("wind_speed_data")]
         ## END CODE HERE ##
     )
 
@@ -169,6 +170,7 @@ def upstream_dag_2():
         },
         ## EXERCISE 1: Turn this task into a producer for the Dataset("wind_direction_data")
         ## START CODE HERE ##
+        outlets=[Dataset("wind_direction_data")]
         ## END CODE HERE ##
     )
 

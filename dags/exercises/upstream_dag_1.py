@@ -189,7 +189,9 @@ def upstream_dag_1():
     # Tip: Use the outlets parameter to achieve this as shown in the upstream_dag_2.
 
     ## START CODE HERE ##
-    @task()
+    @task(
+        outlets=[Dataset("current_weather_data")]
+    )
     ## END CODE HERE ##
     def create_weather_table(
         weather: list | dict, cities_coordinates: list | dict, **context
