@@ -48,10 +48,15 @@ t_log = logging.getLogger("airflow.task")
     ### EXERCISE 3 ###
     # Set the owner of the DAG to your name and the number of retries to 3.
     ### START CODE HERE ###
+    default_args = {
+        'owner': 'svobop',
+        'retries': 3,
+    },
     ### STOP CODE HERE ###
     ### EXERCISE 3 ###
     # Make sure this DAG never has more than 6 consecutive failed runs.
     ### START CODE HERE ###
+    max_consecutive_failed_dag_runs=6,
     ### STOP CODE HERE ###
     tags=["exercise", "exercise_1", "exercise_3"],
 )
