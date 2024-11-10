@@ -16,14 +16,16 @@ from include.helper_functions import expensive_api_call
 def top_level_code():
 
     #### EXERCISE 4 ####
-    the_meaning_of_life_the_universe_and_everything = expensive_api_call()
+    @task
+    def the_meaning_of_life_the_universe_and_everything():
+        return expensive_api_call()
 
     @task
     def reveal_the_meaning_of_life_the_universe_and_everything(the_answer):
         print(f"The meaning of life, the universe, and everything is... {the_answer}.")
 
     reveal_the_meaning_of_life_the_universe_and_everything(
-        the_meaning_of_life_the_universe_and_everything
+        the_meaning_of_life_the_universe_and_everything()
     )
 
 
