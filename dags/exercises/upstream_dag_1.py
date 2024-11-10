@@ -87,15 +87,23 @@ def upstream_dag_1():
     @task
     def get_cities(**context) -> str:
         ### START CODE HERE ### (modify the return statement to return all cities in the list)
-        return context["params"]["my_cities"][0]
+        return context["params"]["my_cities"]
         ### END CODE HERE  ###
 
     cities = get_cities()
 
-    @task
+    @task(
+        map_index_template="{{ my_custom_map_index }}"
+    )
     def get_lat_long_for_one_city(city: str, **context) -> dict:
         """Converts a string of a city name provided into
         lat/long coordinates."""
+        # get the current context and define the custom map index variable
+        from airflow.operators.python import get_current_context
+
+        context = get_current_context()
+        context["my_custom_map_index"] = city
+
         import requests
 
         if context["params"]["simulate_api_failure"]:
@@ -110,7 +118,7 @@ def upstream_dag_1():
         return {"city": city, "lat": lat, "long": long}
 
     ### START CODE HERE ### (use the expand method to map the task over all cities)
-    cities_coordinates = get_lat_long_for_one_city(city=cities)
+    cities_coordinates = get_lat_long_for_one_city.partial().expand(city=cities)
     ### END CODE HERE ###
     ### END EXERCISE ###
 
